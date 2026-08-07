@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birdie Podium™ — coming soon</title>
+  <meta name="description" content="Birdie Podium™, an air purifier redefined. Launching soon on Kickstarter — sign up for the early bird discount.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Birdie">
+  <meta property="og:title" content="Birdie Podium™ — An air purifier, redefined">
+  <meta property="og:description" content="Launching soon on Kickstarter. Sign up for the early bird discount.">
+  <meta property="og:url" content="https://podium-ks.birdie.design/us/">
+  <meta property="og:image" content="https://podium-ks.birdie.design/assets/podium-mobile.jpg">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="576">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Birdie Podium™ — An air purifier, redefined">
+  <meta name="twitter:description" content="Launching soon on Kickstarter. Sign up for the early bird discount.">
+  <meta name="twitter:image" content="https://podium-ks.birdie.design/assets/podium-mobile.jpg">
+  <link rel="alternate" hreflang="en" href="https://podium-ks.birdie.design/">
+  <link rel="alternate" hreflang="de" href="https://podium-ks.birdie.design/de/">
+  <link rel="alternate" hreflang="it" href="https://podium-ks.birdie.design/it/">
+  <link rel="alternate" hreflang="fr" href="https://podium-ks.birdie.design/fr/">
+  <link rel="alternate" hreflang="da" href="https://podium-ks.birdie.design/dk/">
+  <link rel="alternate" hreflang="nl" href="https://podium-ks.birdie.design/nl/">
+  <link rel="alternate" hreflang="x-default" href="https://podium-ks.birdie.design/">
+
+  <style>
+    @font-face {
+      font-family: 'Plain';
+      src: url('../assets/Plain-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Plain';
+      src: url('../assets/Plain-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-display: swap;
+    }
+
+    :root {
+      --yellow: #FFE901;
+      --cream: #FBF8F3;
+      --black: #212121;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Plain', sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    /* ---------- Header ---------- */
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 28px 24px;
+    }
+    header img { height: 34px; width: auto; display: block; }
+
+    header { position: relative; }
+    .lang-switcher {
+      position: absolute;
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--black);
+      background: transparent;
+      border: none;
+      border-radius: 8px;
+      padding: 7px 24px 7px 12px;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23212121' stroke-width='1.5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+    }
+    /* ---------- Hero ---------- */
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 64px 24px 96px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-media img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* ---------- Hero title (desktop only — the mobile image carries it) ---------- */
+    .hero-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    .hero-title h1 {
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 1.1;
+      margin: 0;
+    }
+
+    /* ---------- Countdown ---------- */
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .count-box {
+      background: #fff;
+      border: 1px solid rgba(33, 33, 33, .12);
+      border-radius: 12px;
+      padding: 14px 0 10px;
+      width: 84px;
+      text-align: center;
+    }
+    .count-box strong {
+      display: block;
+      font-size: 30px;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    .count-box span {
+      font-size: 12px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      opacity: .6;
+    }
+
+    /* ---------- Signup ---------- */
+    .signup-lead {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 auto 18px;
+      text-align: center;
+    }
+    .signup-lead a {
+      text-decoration: underline;
+      text-decoration-color: var(--yellow);
+      text-decoration-thickness: 3px;
+      text-underline-offset: 3px;
+    }
+
+    /* Suppress the webshop's Klaviyo popups & teaser tabs. They mount in
+       #dynamic-react-root or in anonymous class-less divs appended to <body>;
+       our embedded form lives inside .klaviyo-form-US9GRG in <main>, so it
+       is unaffected. */
+    #dynamic-react-root,
+    body > div:not([id]):not([class]) {
+      display: none !important;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      padding: 56px 24px 32px;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    .footer-grid > div { max-width: 520px; }
+    footer h3 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+    footer p, footer li { font-size: 15px; }
+    footer ul { list-style: none; }
+    footer li { margin-bottom: 8px; }
+    footer a { text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 48px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(33, 33, 33, .12);
+      font-size: 13px;
+      opacity: .65;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .footer-bottom-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 24px;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; gap: 40px; padding: 24px 24px 64px; }
+      .count-box { width: 72px; }
+      .hero-title { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="https://www.kickstarter.com/projects/birdie-scandinavia/birdie-podium?ref=ex128n" aria-label="Birdie Podium on Kickstarter">
+      <img src="../assets/birdie-logo-black-v2.avif" alt="Birdie®">
+    </a>
+    <select class="lang-switcher" aria-label="Language" onchange="location.href=this.value">
+      <option value="../" selected>English</option>
+      <option value="../de/">Deutsch</option>
+      <option value="../fr/">Français</option>
+      <option value="../it/">Italiano</option>
+      <option value="../dk/">Dansk</option>
+      <option value="../nl/">Nederlands</option>
+    </select>
+  </header>
+
+  <main class="hero">
+    <div class="hero-media">
+      <picture>
+        <source media="(max-width: 860px)" srcset="../assets/podium-mobile.jpg">
+        <img src="../assets/podium-desktop.jpg" alt="Birdie® Podium™">
+      </picture>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-title">
+        <h1>An air purifier, redefined</h1>
+      </div>
+
+      <div class="countdown" id="countdown" aria-label="Countdown to launch">
+        <div class="count-box"><strong id="cd-days">–</strong><span>days</span></div>
+        <div class="count-box"><strong id="cd-hours">–</strong><span>hours</span></div>
+        <div class="count-box"><strong id="cd-mins">–</strong><span>min</span></div>
+        <div class="count-box"><strong id="cd-secs">–</strong><span>sec</span></div>
+      </div>
+
+      <p class="signup-lead"><a href="https://www.kickstarter.com/projects/birdie-scandinavia/birdie-podium?ref=ex128n">Click here and tap “Notify me on launch” on Kickstarter</a> or fill the form below to be first in line for all launch updates</p>
+
+      <div class="klaviyo-form-US9GRG"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3>About</h3>
+        <p>Birdie® started with a single bird, a friendly reminder to open your windows. Join the journey as the flock is growing: We make thoughtfully designed products with one mission, healthy air in every home. Simple as that.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-links">
+        <a href="https://birdie.design/policies/terms-of-service">Terms of Service</a>
+        <a href="https://birdie.design/policies/legal-notice">Legal Notice</a>
+        <a href="https://birdie.design/policies/privacy-policy">Privacy Policy</a>
+      </div>
+      <span>© 2026, Birdie Scandinavia ApS</span>
+    </div>
+  </footer>
+
+  <script async src="https://static.klaviyo.com/onsite/js/U9w76Y/klaviyo.js?company_id=U9w76Y"></script>
+  <script>
+    // Launch date — change this one line to move the countdown.
+    const LAUNCH = new Date('2026-09-15T10:00:00+02:00');
+
+    const els = {
+      days: document.getElementById('cd-days'),
+      hours: document.getElementById('cd-hours'),
+      mins: document.getElementById('cd-mins'),
+      secs: document.getElementById('cd-secs'),
+    };
+
+    function tick() {
+      let diff = Math.max(0, LAUNCH - new Date()) / 1000;
+      els.days.textContent = Math.floor(diff / 86400);
+      els.hours.textContent = String(Math.floor(diff / 3600) % 24).padStart(2, '0');
+      els.mins.textContent = String(Math.floor(diff / 60) % 60).padStart(2, '0');
+      els.secs.textContent = String(Math.floor(diff) % 60).padStart(2, '0');
+    }
+    tick();
+    setInterval(tick, 1000);
+
+    // Size the language dropdown to its selected option so the arrow sits right after the word.
+    const langSel = document.querySelector('.lang-switcher');
+    function fitLang() {
+      const probe = document.createElement('span');
+      probe.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;font:500 13px Plain,sans-serif';
+      probe.textContent = langSel.options[langSel.selectedIndex].text;
+      document.body.appendChild(probe);
+      langSel.style.width = (probe.offsetWidth + 36) + 'px';
+      probe.remove();
+    }
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fitLang); }
+    fitLang();
+
+  </script>
+
+</body>
+</html>
