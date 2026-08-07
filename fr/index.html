@@ -67,6 +67,28 @@
     }
     header img { height: 34px; width: auto; display: block; }
 
+    header { position: relative; }
+    .lang-switcher {
+      position: absolute;
+      top: 50%;
+      right: 24px;
+      transform: translateY(-50%);
+      display: flex;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .lang-switcher a { text-decoration: none; opacity: .5; }
+    .lang-switcher a:hover { opacity: 1; }
+    .lang-switcher a.active {
+      opacity: 1;
+      border-bottom: 3px solid var(--yellow);
+    }
+    @media (max-width: 700px) {
+      header { flex-direction: column; align-items: center; gap: 14px; }
+      .lang-switcher { position: static; transform: none; }
+    }
+
     /* ---------- Hero ---------- */
     .hero {
       max-width: 1200px;
@@ -204,6 +226,14 @@
     <a href="https://www.kickstarter.com/projects/birdie-scandinavia/birdie-podium?ref=ex128n" aria-label="Birdie Podium on Kickstarter">
       <img src="../assets/birdie-logo-black-v2.avif" alt="Birdie®">
     </a>
+    <nav class="lang-switcher" aria-label="Language">
+      <a href="../">EN</a>
+      <a href="../de/">DE</a>
+      <a href="../ch/">CH</a>
+      <a href="../fr/" class="active">FR</a>
+      <a href="../dk/">DK</a>
+      <a href="../nl/">NL</a>
+    </nav>
   </header>
 
   <main class="hero">
