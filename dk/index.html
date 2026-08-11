@@ -356,6 +356,18 @@
         if (window.gtag) gtag('event', 'generate_lead', { form_id: e.detail.formId, page_lang: document.documentElement.lang, event_id: eventId });
       }
     });
+
+    // Track clicks on the Kickstarter links (header logo + hero link).
+    document.querySelectorAll('a[href*="kickstarter.com"]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        var params = {
+          link_location: a.closest('header') ? 'header' : 'hero',
+          page_lang: document.documentElement.lang
+        };
+        if (window.fbq) fbq('trackCustom', 'KickstarterClick', params);
+        if (window.gtag) gtag('event', 'kickstarter_click', params);
+      });
+    });
   </script>
 </body>
 </html>
