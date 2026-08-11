@@ -13,6 +13,23 @@
     gtag('config', 'G-TMTQX4E96L');
   </script>
 
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '342739244394608');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=342739244394608&ev=PageView&noscript=1"
+  /></noscript>
+
   <title>Birdie Podium™ — binnenkort verkrijgbaar</title>
   <meta name="description" content="Birdie Podium™, een luchtreiniger, opnieuw uitgevonden. Binnenkort op Kickstarter. Schrijf je in voor de early bird-korting.">
   <link rel="icon" type="image/png" href="../assets/favicon.png">
@@ -327,5 +344,18 @@
 
   </script>
 
+
+  <script>
+    // Fire conversion events in Meta + GA4 when the Klaviyo form is submitted.
+    // eventID enables dedup if the Conversions API is added later.
+    window.addEventListener('klaviyo-forms', function (e) {
+      if (e.detail && e.detail.type === 'submit') {
+        var eventId = 'lead-' + Date.now() + '-' + Math.random().toString(36).slice(2, 10);
+        var params = { form_id: e.detail.formId, page_lang: document.documentElement.lang };
+        if (window.fbq) fbq('track', 'Lead', params, { eventID: eventId });
+        if (window.gtag) gtag('event', 'generate_lead', { form_id: e.detail.formId, page_lang: document.documentElement.lang, event_id: eventId });
+      }
+    });
+  </script>
 </body>
 </html>
